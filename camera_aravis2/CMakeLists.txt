@@ -46,7 +46,6 @@ find_package(yaml-cpp REQUIRED)
 include_directories(include
   ${ARAVIS_INCLUDE_DIRS}
   ${GLIB2_INCLUDE_DIRS}
-  ${YAML_CPP_INCLUDE_DIRS}
 )
 
 #if 'humble' and 'iron' within the rclcpp_DIR path, define to build with matched events
@@ -80,7 +79,7 @@ set(LIBRARIES
   gobject-2.0
   cv_bridge::cv_bridge
   image_transport::image_transport
-  ${YAML_CPP_LIBRARY_DIRS}
+  yaml-cpp
 )
 
 add_library(${LIBRARY_NAME} SHARED
